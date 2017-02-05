@@ -1,0 +1,5 @@
+---
+
+- name: Install open jdk
+  yum: name=java state=latest
+

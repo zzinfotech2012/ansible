@@ -1,0 +1,7 @@
+---
+
+- name: Set up NTP
+  hosts: all
+  gather_facts: yes
+  roles:
+    - {role: "ntp"}

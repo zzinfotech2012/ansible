@@ -6,4 +6,5 @@
 - include: s-elasticsearch.yml
 - include: s-kibana.yml
 - include: s-logstash.yml
+- include: s-filebeat.yml
 

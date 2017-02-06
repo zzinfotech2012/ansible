@@ -1,0 +1,12 @@
+---
+
+- name: restart filebeat
+  service:
+    name: filebeat
+    state: restarted
+
+- name: reload filebeat
+  service:
+    name: filebeat
+    state: reloaded
+

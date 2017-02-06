@@ -1,0 +1,7 @@
+---
+
+- name: Install Filebeat
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "filebeat"}

@@ -1,0 +1,17 @@
+---
+
+- name: Install filebeat public sign key
+  rpm_key: key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present
+
+- name: Install filebeat 5.x repo
+  copy: src=filebeat.repo dest=/etc/yum.repos.d/filebeat.repo owner=root mode=644
+
+- name: Install filebeat 5.x
+  yum: name=filebeat state=latest
+  notify: restart filebeat
+
+- name: Enable filebeat service
+  service: name=filebeat enabled=yes
+
+
+

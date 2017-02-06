@@ -1,6 +1,0 @@
----
-
-- include: s-ntp.yml
-- include: s-nettools.yml
-- include: s-java.yml
-

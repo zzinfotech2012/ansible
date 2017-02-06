@@ -1,0 +1,5 @@
+---
+
+- name: Setup SELinux state to {{action}}
+  selinux: state={{action}}
+

@@ -1,0 +1,7 @@
+---
+
+- name: Setup SElinux state
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "selinux", action: "disabled"}

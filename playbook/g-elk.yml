@@ -1,0 +1,9 @@
+---
+
+- include: s-ntp.yml
+- include: s-nettools.yml
+- include: s-java.yml
+- include: s-elasticsearch.yml
+- include: s-kibana.yml
+- include: s-logstash.yml
+

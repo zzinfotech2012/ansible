@@ -1,0 +1,17 @@
+---
+
+- name: Install kibana public sign key
+  rpm_key: key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present
+
+- name: Install kibana 5.x repo
+  copy: src=kibana.repo dest=/etc/yum.repos.d/kibana.repo owner=root mode=644
+
+- name: Install kibana 5.x
+  yum: name=kibana state=latest
+  notify: restart kibana
+
+- name: Enable kibana service
+  service: name=kibana enabled=yes
+
+
+

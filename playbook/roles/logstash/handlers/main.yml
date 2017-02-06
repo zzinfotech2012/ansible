@@ -1,0 +1,12 @@
+---
+
+- name: restart logstash
+  service:
+    name: logstash
+    state: restarted
+
+- name: reload logstash
+  service:
+    name: logstash
+    state: reloaded
+

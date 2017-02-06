@@ -3,4 +3,15 @@
 - name: Install elasticsearch public sign key
   rpm_key: key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present
 
+- name: Install elasticsearch 5.x repo
+  copy: src=elasticsearch.repo dest=/etc/yum.repos.d/elasticsearch.repo owner=root mode=644
+
+- name: Install elasticsearch 5.x
+  yum: name=elasticsearch state=latest
+  notify: restart elasticsearch
+
+- name: Enable elasticsearch service
+  service: name=elasticsearch enabled=yes
+
+
 

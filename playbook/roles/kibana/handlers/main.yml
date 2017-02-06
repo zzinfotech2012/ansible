@@ -1,0 +1,12 @@
+---
+
+- name: restart kibana
+  service:
+    name: kibana
+    state: restarted
+
+- name: reload kibana
+  service:
+    name: kibana
+    state: reloaded
+

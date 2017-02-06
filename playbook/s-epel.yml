@@ -1,0 +1,7 @@
+---
+
+- name: Install epel repo
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "epel"}

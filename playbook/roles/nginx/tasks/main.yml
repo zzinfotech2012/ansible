@@ -1,0 +1,29 @@
+---
+
+- name: Install the nginx service
+  yum: name=nginx state=present
+  notify: restart nginx
+
+- name: Install httpd-tools
+  yum: name=httpd-tools state=present
+
+- name: Start nginx service
+  service: name=nginx state=started
+  notify: restart nginx
+
+- name: Enable nginx service
+  service: name=nginx enabled=yes
+  notify: restart nginx
+
+- name: Copy nginx configuration file
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf owner=root mode=644
+  notify: reload nginx
+
+- name: Copy kibana plugin configuration file
+  copy: src=kibana.conf dest=/etc/nginx/conf.d/kibana.conf owner=root mode=644
+  notify: reload nginx
+
+- name: Copy htpasswd.users configuration file
+  copy: src=htpasswd.users dest=/etc/nginx/htpasswd.users owner=root mode=644
+  notify: reload nginx
+

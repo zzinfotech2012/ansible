@@ -1,5 +1,6 @@
 ---
 
+- include: s-epel.yml
 - include: s-ntp.yml
 - include: s-nettools.yml
 - include: s-java.yml
@@ -7,4 +8,5 @@
 - include: s-kibana.yml
 - include: s-logstash.yml
 - include: s-filebeat.yml
+- include: s-nginx.yml
 

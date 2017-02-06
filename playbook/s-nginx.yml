@@ -1,0 +1,7 @@
+---
+
+- name: Install Ngnix Service
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "nginx"}

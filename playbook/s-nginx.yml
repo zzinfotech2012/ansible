@@ -1,6 +1,6 @@
 ---
 
-- name: Install Ngnix Service
+- name: Install Nginx Service
   hosts: all
   gather_facts: no
   roles:

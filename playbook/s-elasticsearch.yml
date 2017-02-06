@@ -1,0 +1,7 @@
+---
+
+- name: Install Elasticsearch
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "elasticsearch"}

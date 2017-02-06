@@ -1,0 +1,7 @@
+---
+
+- name: Install net-tools
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "nettools"}

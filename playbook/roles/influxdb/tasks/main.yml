@@ -1,0 +1,14 @@
+---
+
+- name: Install Influxdb repo
+  copy: src=influxdb.repo dest=/etc/yum.repos.d/influxdb.repo owner=root mode=644
+
+- name: Install Influxdb
+  yum: name=influxdb state=latest
+  notify: restart influxdb
+
+- name: Enable influxdb service
+  service: name=influxdb enabled=yes
+
+
+

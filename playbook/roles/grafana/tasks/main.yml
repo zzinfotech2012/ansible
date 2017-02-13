@@ -1,0 +1,14 @@
+---
+
+- name: Install Grafana repo
+  copy: src=grafana.repo dest=/etc/yum.repos.d/grafana.repo owner=root mode=644
+
+- name: Install Grafana
+  yum: name=grafana state=latest
+  notify: restart grafana-server
+
+- name: Enable Grafana service
+  service: name=grafana-server enabled=yes
+
+
+

@@ -3,3 +3,6 @@
 - name: Install open jdk
   yum: name=java state=latest
 
+- name: Install open jdk devel
+  yum: name=java-devel state=latest
+

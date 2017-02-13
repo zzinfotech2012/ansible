@@ -1,0 +1,7 @@
+---
+
+- name: Install Grafana
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "grafana"}

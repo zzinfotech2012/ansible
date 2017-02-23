@@ -6,4 +6,5 @@
 - include: s-nettools.yml
 - include: s-influxdb.yml
 - include: s-grafana.yml
+- include: s-telegraf.yml
 

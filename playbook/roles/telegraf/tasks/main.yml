@@ -1,0 +1,10 @@
+---
+
+- name: Install telegraf
+  yum: name=telegraf state=latest
+  notify: restart telegraf
+
+- name: Enable telegraf service
+  service: name=telegraf enabled=yes
+
+

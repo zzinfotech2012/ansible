@@ -1,0 +1,15 @@
+---
+
+- name: Install nodejs
+  yum: name=nodejs state=latest
+
+- name: Install npm
+  yum: name=npm state=latest
+
+- name: Install pm2 globally.
+  npm:
+    name: pm2
+    state: latest
+    global: yes
+
+

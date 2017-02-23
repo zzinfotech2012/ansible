@@ -1,0 +1,8 @@
+---
+
+- include: s-disable-selinux.yml
+- include: s-epel.yml
+- include: s-ntp.yml
+- include: s-nettools.yml
+- include: s-nodejs.yml
+

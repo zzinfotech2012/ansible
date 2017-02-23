@@ -1,0 +1,7 @@
+---
+
+- name: Install nodejs
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "nodejs"}

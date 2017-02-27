@@ -1,0 +1,7 @@
+---
+
+- name: Install collectd
+  hosts: all
+  gather_facts: no
+  roles:
+    - {role: "collectd"}

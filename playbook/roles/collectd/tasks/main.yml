@@ -1,0 +1,11 @@
+---
+
+- name: Install collectd
+  yum: name=collectd state=latest
+  notify: restart collectd
+
+- name: Enable collectd service
+  service: name=collectd enabled=yes
+
+
+

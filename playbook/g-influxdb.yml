@@ -7,4 +7,5 @@
 - include: s-influxdb.yml
 - include: s-grafana.yml
 - include: s-telegraf.yml
+- include: s-collectd.yml
 
